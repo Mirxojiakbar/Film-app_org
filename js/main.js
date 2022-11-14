@@ -92,7 +92,7 @@ renderMoovies()
 
 ////!!!!!!!!!!!!!!!!!!!!!!Finging!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 //!!!!!!!!!!!!!!!!!!!!!!!!(func)!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
+res
 const findFilm=(regexp, rating)=>{
 
     return Moovies.filter((film)=>{
@@ -120,10 +120,11 @@ $('.search').addEventListener('click', ()=>{
         setTimeout(()=>{
             searchResultsRender(searchResult)
             $('.res').textContent=searchResult.length
-        },100)
+        },1000)
     }
     else{
         $('.wrapper').innerHTML='<h1 class="text-white">Malumot topilmadi!</h1>'
+        $('.res').textContent=searchResult.length
     }
     
 })  
